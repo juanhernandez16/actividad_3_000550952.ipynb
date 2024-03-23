@@ -1,0 +1,35 @@
+Pruebas
+
+Prueba_1
+Iniciar filtrar_señales
+f, resultado, i
+si el usuario ingresa -9
+f = -9
+Como f es negativo 
+resultado = 0
+
+
+Prueba_2
+Iniciar filtrar_señales
+f, resultado, i
+si el usuario ingresa 0
+f = 0
+como f es igual a 0 no pasa el filtro
+resultado = 5.140929987637018e-06
+
+Prueba_3
+f, resuoltado, i
+si el usuario ingresa 2.5
+f = 2.5
+como f es un decimal no se ejecuta el ciclo
+
+Pregunta
+¿para qué valor de frecuencia la señal deja de ser bloqueada?
+La frecuencia deja de ser bloqueada por el filtro cuando es mayor a 844
+ 
+Prueba
+f, resultado, i
+si el usuario ingresa 844
+f = 844
+Resultado = 0.30168628156602423
+Pasa el filtro

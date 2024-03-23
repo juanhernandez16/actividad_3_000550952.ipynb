@@ -1,0 +1,31 @@
+Program_filtrado_de_señales
+// Programa para el filtrado de señales utilizando la formula de la funcion de la campana de Gauss
+Start
+	// Declaración de variables			
+    	Declare Constant MEDIA = 1000 
+    	Declare Constant DESVIACION = 300 
+    	Declare Constant PERCENT = 0.3 
+    	Declare Constant PI = 3.14159 
+    	Declare Constant EULER = 2.7182 
+    	Declare Real f, resultado, pr_acumulada 
+    	Declare Integer i // Representa el iterador
+
+	Display "Ingrese la frecuencia de la señal:  "
+	Input f					
+	
+	set pr_acumulada = 0
+
+        //Ciclo For
+	For i = 1 To f 
+		resultado = ((1 / (DESVIACION * ((2 * PI)^(1/2)))) * EULER^((-1/2) * ((i - MEDIA) / DESVIACION)^2 ))
+		set pr_acumulada = pr_acumulada += resultado
+	End For
+
+	 
+	If pr_acumulada > PERCENT then
+		Display "La señal pasa el filtro."
+	Else
+		Display "La señal es bloqueada por el filtro."
+	End If
+
+End
